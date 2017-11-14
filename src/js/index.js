@@ -80,7 +80,7 @@ function validForm(password, email) {
     pos = foundPos + 1;
     total++;
   }
-  alert(total);
+  // alert(total);
   if (pass.length < 5) {
     return false;
   }
