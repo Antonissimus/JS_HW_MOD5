@@ -29,13 +29,15 @@ var cutAdr = document.querySelector("#cutAdr");
 cutAdr.addEventListener('click', function () {
   var answer = document.querySelector(".ex3 .answer");
   var string = document.querySelector('.ex3 #adrString').value;
-  if (~string.indexOf("http://")) {
-    answer.innerHTML = 'адрес: ' + string.substring(7);
-  } else if (~string.indexOf("https://")) {
-    answer.innerHTML = 'адрес: ' + string.substring(8);
-  } else {
-    answer.innerHTML = 'адрес: ' + string;
-  }
+  // if (~string.indexOf("http://")) {
+  //   answer.innerHTML = 'адрес: ' + string.substring(7);
+  // } else if (~string.indexOf("https://")) {
+  //   answer.innerHTML = 'адрес: ' + string.substring(8);
+  // } else {
+  //   answer.innerHTML = 'адрес: ' + string;
+  // }
+
+  answer.innerHTML = ~string.indexOf("http://") ? 'адрес: ' + string.substring(7) : ~string.indexOf("https://") ? 'адрес: ' + string.substring(8) : 'адрес: ' + string;
 });
 
 // Задание 4
