@@ -16,12 +16,11 @@ var showImg = document.querySelector("#showImg");
 showImg.addEventListener('click', function () {
   var answer = document.querySelector(".ex2 .answer");
   var arrImgs = ['img/1.png', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg', 'img/5.jpg'];
-  for (var i = 0; i < arrImgs.length; i++) {
+  arrImgs.forEach(function (arrImg) {
     var img = document.createElement('img');
-    var imgSrc = arrImgs[i];
-    img.src = imgSrc;
+    img.src = arrImg;
     answer.appendChild(img);
-  }
+  });
 });
 
 // Задание 3

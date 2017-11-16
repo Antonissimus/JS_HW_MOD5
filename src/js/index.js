@@ -21,12 +21,12 @@ showImg.addEventListener('click', function () {
     'img/4.jpg',
     'img/5.jpg',
   ]
-  for (let i = 0; i < arrImgs.length; i++) {
+  arrImgs.forEach(function(arrImg) {
     let img = document.createElement('img');
-    let imgSrc = arrImgs[i];
-    img.src = imgSrc;
+    img.src = arrImg;
     answer.appendChild(img);
-  }
+  })
+
 })
 
 // Задание 3
